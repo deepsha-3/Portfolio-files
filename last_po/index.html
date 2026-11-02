@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dipisha Dumre · portfolio + blog</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts: Inter + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="image/logo_black.png">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLE BACKGROUND ===== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="container">
+
+   <!-- ===== FIXED NAVBAR ===== -->
+<nav class="navbar">
+  <a href="./image/logo_black.png" class="logo">
+    <img src="./image/logo_black.png" alt="Logo" class="logo-img">
+    <span class="logo-text">dipishadumre</span>
+  </a>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#blog">Beyond the Code</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="toggle theme">
+      <span class="dot"></span>
+      <i class="fas fa-sun"></i>
+    </button>
+  </div>
+</nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+      <div class="hero-image">
+        <img src="./image/profile2.png" alt="Dipisha Dumre" />
+      </div>
+      <div class="hero-content">
+        <span class="name-badge"><i class="fas fa-user-astronaut"></i>  Dipisha Dumre</span>
+        <h1>create · inspire <br />digital stories</h1>
+        <p class="subhead">creative developer &amp; designer · passionate about books, music &amp; productivity.</p>
+        <div class="cta-group">
+          <a href="#work" class="btn btn-primary"><i class="fas fa-arrow-down"></i> projects</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> let's talk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ME SECTION ===== -->
+    <div id="about">
+      <h2 class="section-title reveal"><i class="fas fa-user" style="margin-right:12px;"></i>About Me</h2>
+      <div class="about-grid reveal">
+        <div class="about-card">
+          <h2>Who I am</h2>
+          <p>
+            Hi, I'm <span class="highlight">Dipisha Dumre</span> from Waling, Syangja, Nepal. 
+            I completed my <span class="highlight">BICTE</span> from Tribhuvan University 
+            under Waling Multiple Campus.
+          </p>
+          <p>
+            Outside of tech, I'm deeply interested in <span class="highlight">reading books, 
+            listening to music, editing, and personal productivity</span>. I believe that a 
+            curious mind and a creative spirit are the keys to meaningful work.
+          </p>
+          <p>
+            I love blending creativity with technology whether it's designing an intuitive 
+            interface, editing a video, editing photos or writing clean code.
+          </p>
+        </div>
+        <div class="about-card">
+          <h2>Details</h2>
+          <div class="about-detail"><i class="fas fa-graduation-cap"></i> <strong>Completed</strong> BICTE — TU (Waling Multiple Campus)</div>
+          <div class="about-detail"><i class="fas fa-map-pin"></i> <strong>Location:</strong> Waling, Syangja, Nepal</div>
+          <div class="about-detail"><i class="fas fa-bullseye"></i> <strong>Focus Areas</strong> Frontend Development · UI/UX · Content Editing</div>
+          <div class="about-detail"><i class="fas fa-heart"></i> <strong>Interests</strong> Books · Music · Productivity · Editing</div>
+          
+          <!-- ===== DOWNLOAD CV BUTTON ===== -->
+          <div style="margin-top:1.5rem; padding-top:1.2rem; border-top:1px solid var(--border-color);">
+            <a href="/last_po/image/CV.pdf" class="btn btn-primary" download style="display:inline-flex; align-items:center; gap:0.6rem; background:var(--btn-primary-bg); border:1px solid var(--btn-primary-bg); color:white; padding:0.8rem 2.2rem; border-radius:60px; font-weight:500; text-decoration:none; transition:0.25s; font-size:1rem; cursor:pointer; box-shadow:0 8px 24px -8px #6d28d9;">
+              <i class="fas fa-file-pdf"></i> Download CV
+            </a>
+          </div>
+          
+          <!-- ===== QUOTE ===== -->
+          <div style="margin-top:1.5rem; padding-top:1.2rem; border-top:1px solid var(--border-color);">
+            <span style="color:var(--text-secondary); font-weight:300; font-size:0.95rem;">
+              <i class="fas fa-quote-left" style="color:var(--btn-primary-bg); margin-right:6px;"></i> 
+              create. inspire. grow.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <div id="skills">
+      <h2 class="section-title reveal"><i class="fas fa-code" style="margin-right:12px;"></i>Skills</h2>
+      <div class="skills-wrapper reveal">
+        <div class="sub-title"><i class="fas fa-chart-simple"></i>Technical Expertise</div>
+        <div class="expertise-grid">
+          <div class="expertise-item"><div class="label-row"><span>HTML/CSS</span><span class="percent">75%</span></div><div class="progress-bar"><div class="fill" style="width:75%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>Database (SQL)</span><span class="percent">70%</span></div><div class="progress-bar"><div class="fill" style="width:70%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>C/C++</span><span class="percent">75%</span></div><div class="progress-bar"><div class="fill" style="width:75%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>UI/UX Design</span><span class="percent">60%</span></div><div class="progress-bar"><div class="fill" style="width:60%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>JavaScript</span><span class="percent">50%</span></div><div class="progress-bar"><div class="fill" style="width:50%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>PHP</span><span class="percent">50%</span></div><div class="progress-bar"><div class="fill" style="width:50%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>Linux</span><span class="percent">35%</span></div><div class="progress-bar"><div class="fill" style="width:35%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>Python</span><span class="percent">65%</span></div><div class="progress-bar"><div class="fill" style="width:65%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>Java</span><span class="percent">30%</span></div><div class="progress-bar"><div class="fill" style="width:30%;"></div></div></div>
+          <div class="expertise-item"><div class="label-row"><span>Artificial Intelligence</span><span class="percent">55%</span></div><div class="progress-bar"><div class="fill" style="width:55%;"></div></div></div>
+          <div class="expertise-item others"><div class="label-row"><span>Others (Computer navigation and Office related)</span><span class="percent">85%</span></div><div class="progress-bar"><div class="fill" style="width:85%;"></div></div></div>
+        </div>
+        <div class="sub-title" style="margin-top:2.5rem; padding-top:1.8rem; border-top:1px solid var(--border-color);"><i class="fas fa-cubes"></i>Stack &amp; Tools</div>
+        <div class="tools-grid">
+            <div class="tool-item"><i class="fas fa-code"></i> VS Code</div>
+            <div class="tool-item"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="tool-item"><i class="fas fa-terminal"></i> Bash</div>
+            <div class="tool-item"><i class="fas fa-paint-brush"></i> Figma</div>
+            <div class="tool-item"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="tool-item"><i class="fab fa-ubuntu"></i> Ubuntu</div>
+            <div class="tool-item"><i class="fab fa-java"></i> JDK</div>
+            <div class="tool-item"><i class="fas fa-chart-bar"></i> Power BI</div>
+            <div class="tool-item"><i class="fas fa-database"></i> HDFS</div>
+            <div class="tool-item"><i class="fas fa-warehouse"></i> Hive</div>
+            <div class="tool-item"><i class="fas fa-image"></i> Adobe Photoshop</div>
+            <div class="tool-item"><i class="fas fa-cut"></i> Editing</div>
+            <div class="tool-item"><i class="fas fa-rocket"></i> Anaconda</div>
+            <div class="tool-item"><i class="fas fa-cloud-upload-alt"></i> Google Colab</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PROJECTS SECTION  ===== -->
+     
+    <div id="work">
+      <h2 class="section-title reveal"><i class="fas fa-laptop-code" style="margin-right:12px;"></i>Featured Work</h2>
+      <div class="projects-grid">
+
+        <!-- ===== PROJECT 1: ShopNest ===== -->
+        <div class="project-card reveal">
+          <img class="project-img" src="/last_po/image/shopnest.png" alt="ShopNest shop management system" />
+          <div class="project-body">
+            <h3>ShopNest</h3>
+            <p class="project-brief">
+              A web-based shop management system digitizing operations for small shops and mini-markets. 
+              Features role-based access for Owners, Staff, and Customers with efficient inventory, 
+              customer, and transaction management. Built with PHP and MySQL for a cost-effective, 
+              quick 9-month payback solution.
+            </p>
+            <div class="project-full" id="projFull1">
+              <p>ShopNest is a web-based shop management system developed to digitize and streamline operations for small shops and mini-markets. It features role-based access for Owners, Staff, and Customers, enabling efficient inventory, customer, and transaction management. The system is built using accessible technologies like PHP and MySQL, making it a cost-effective solution with a quick 9-month payback period. By automating manual processes, it addresses common challenges like inaccurate stock tracking and slow billing. Future enhancements could include offline access and real-time communication to further improve its functionality.</p>
+            </div>
+            <span class="project-tag"><i class="fas fa-book"></i> HTML · CSS · JavaScript · PHP · Python · MySQL</span>
+            <div class="project-actions">
+              <button class="read-more-project" data-target="projFull1">read more <i class="fas fa-chevron-down"></i></button>
+              <a href="/Projects/EP_final/main_dashboard/index.html" class="project-action">view project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PROJECT 2: Job Matching Assistant ===== -->
+        <div class="project-card reveal">
+          <img class="project-img" src="/last_po/image/jobsearchapp.png" alt="Job Matching Assistant desktop app" />
+          <div class="project-body">
+            <h3>Job Matching Assistant</h3>
+            <p class="project-brief">
+              A desktop application built with Python and Tkinter that matches user profiles to 
+              Nepal-based jobs using BFS and DFS algorithms. Includes authentication, profile 
+              management, search-path visualization, and CSV export. Features a modern, animated 
+              interface with a complete password-reset system.
+            </p>
+            <div class="project-full" id="projFull2">
+              <p>This project is a Job Matching Assistant desktop application built with Python and Tkinter. It allows users to register, log in, and update their profile with skills and location. The core functionality uses BFS and DFS algorithms to search a CSV dataset of Nepal-based jobs and match them to user profiles. The application displays matching jobs with scores, visualizes the search paths, and allows exporting results to CSV. It features a complete authentication system with password reset functionality and a modern, animated user interface.</p>
+            </div>
+            <span class="project-tag"><i class="fas fa-book"></i> Python · SQLite · Tkinter · Pandas · CSV</span>
+            <div class="project-actions">
+              <button class="read-more-project" data-target="projFull2">read more <i class="fas fa-chevron-down"></i></button>
+              <a href="https://github.com/deepsha-3/Job_search_application" class="project-action">view project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PROJECT 3: Portfolio Project ===== -->
+        <div class="project-card reveal">
+          <img class="project-img" src="/last_po/image/portfolio_web.png" alt="Portfolio Pro responsive website" />
+          <div class="project-body">
+            <h3>Draft Portfolio Website</h3>
+            <p class="project-brief">
+              A personal portfolio website built from scratch with HTML, CSS, and JavaScript. 
+              Features light/dark mode, a filterable gallery, testimonial slider, and a fully 
+              responsive design. Showcases skills, services, and contact form with a clean, 
+              modern UI using Boxicons and Swiper.
+            </p>
+            <div class="project-full" id="projFull3">
+              <p>This project is a personal portfolio website built from scratch using HTML, CSS, and JavaScript. It features a clean, modern design with both light and dark mode support, showcasing the developer's skills, experience, and recent work. The page includes sections for About Me, Skills (frontend and backend), Services, a filterable portfolio gallery, testimonials, and a contact form. Interactive elements like the Swiper slider for testimonials and MixItUp for portfolio filtering enhance user experience. The design uses Boxicons for icons and is fully responsive, making it suitable for all devices. This portfolio serves as an effective personal branding tool for a frontend developer, highlighting their expertise in UI/UX and web development. The project is open-source and available for anyone to use or modify.</p>
+            </div>
+            <span class="project-tag"><i class="fas fa-cube"></i> HTML · CSS · JavaScript</span>
+            <div class="project-actions">
+              <button class="read-more-project" data-target="projFull3">read more <i class="fas fa-chevron-down"></i></button>
+              <a href="/Projects/portfolio-website/index.html" class="project-action">view project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== HOBBIES SECTION  ====== ===== -->
+    <div id="hobbies">
+      <h2 class="section-title reveal"><i class="fas fa-pen-fancy" style="margin-right:12px;"></i> Beyond the Code </h2>
+      <div class="hobby-grid">
+        
+        <!-- Hobby 1 -->
+        <div class="hobby-card reveal">
+          <img class="hobby-img" src="./image/H1.jpg" alt="Books" />
+          <div class="hobby-body">
+            <div class="hobby-meta"><span><i class="far fa-calendar"></i> May 10, 2026</span><span><i class="far fa-clock"></i> 5 min read</span></div>
+            <h3> Want to Grow? Start Reading.</h3>
+            <p>How deep reading habits build self-awareness, emotional depth, and quiet confidence.</p>
+            <div class="extra-text" id="extraText1">Growth rarely happens by accident. It happens when you deliberately step outside your comfort zone and expose yourself to new ideas and few things do that as gently and powerfully as a good book. Think about it: for the price of a cup of coffee, you can sit with the world's greatest thinkers, leaders, and storytellers. They share their hard-won lessons with you, patiently, one page at a time. Books are the cheapest, most accessible mentors you'll ever have. They don't judge you, they don't rush you, and they're always there when you're ready. They challenge the assumptions you've never questioned  just as Brené Brown does in The Gifts of Imperfection, teaching you to treat yourself with kindness instead of constant criticism. They stretch your empathy by letting you live inside someone else's life, someone else's struggles, someone else's joy much like Hermann Hesse's Siddhartha, which quietly reassures anyone who feels lost. Want to build discipline and consistency? James Clear's Atomic Habits shows how small changes reshape your identity. Craving inner calm in a noisy world? Jay Shetty's Think Like a Monk distills ancient wisdom into everyday practice. And for self-mastery, there's Marcus Aurelius's Meditations a book you can open to any page for a moment of clarity. And slowly, almost without noticing, they give you the words to understand yourself more honestly and to understand the people around you with more kindness. That's the quiet magic of reading: it doesn't just fill your mind, it shapes your character.</div>
+            <span class="hobby-tag"><i class="fas fa-book-open"></i> books · mindset</span>
+            <button class="read-more" data-target="extraText1">read more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Hobby 2 -->
+        <div class="hobby-card reveal">
+          <img class="hobby-img" src="./image/H2.jpg" alt="Music" />
+          <div class="hobby-body">
+            <div class="hobby-meta"><span><i class="far fa-calendar"></i> Apr 22, 2026</span><span><i class="far fa-clock"></i> 3 min read</span></div>
+            <h3>The Rhythm of a Well-Lived Life: Music & Growth</h3>
+            <p>How music shapes your mind, your mood, and the person you're becoming.</p>
+            <div class="extra-text" id="extraText2">Some lessons can't be taught with words alone they arrive through rhythm, repetition, and the simple act of showing up to practice. Learning an instrument teaches patience long before it teaches technique. It teaches you that progress is quiet, that mistakes are part of the melody, and that beauty comes from structure, not accident. Music trains your ear, yes but more importantly, it trains your character. It asks you to listen before you speak, to feel before you judge, and to keep going even when no one is clapping. Whether you're strumming your first chord or humming an old favorite, music reminds you that growth is a rhythm, not a race. And the same is true of the books you choose: Oliver Sacks's Musicophilia explores how melody shapes the human mind; Daniel Levitin's This Is Your Brain on Music reveals why rhythm moves us so deeply; and The Music Lesson by Victor Wooten turns practice into a philosophy of living. Together, music and reading remind us that the richest growth happens when we slow down, listen closely, and let the rhythm shape us.</div>
+            <span class="hobby-tag"><i class="fas fa-music"></i> music · creativity</span>
+            <button class="read-more" data-target="extraText2">read more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Hobby 3 -->
+        <div class="hobby-card reveal">
+          <img class="hobby-img" src="./image/H3.png" alt="Productivity" />
+          <div class="hobby-body">
+            <div class="hobby-meta"><span><i class="far fa-calendar"></i> Mar 15, 2026</span><span><i class="far fa-clock"></i> 6 min read</span></div>
+            <h3>Small Habits, Big Change: Productivity That Feels Human</h3>
+            <p>How small, honest habits protect your focus, your energy, and your peace of mind.</p>
+            <div class="extra-text" id="extraText3">Real productivity isn't about squeezing more hours out of your day it's about protecting your energy, your attention, and your peace of mind, and the habits that actually last are rarely dramatic; they're small, repeatable, and kind to you. Every morning, before the noise begins, ask yourself one simple question: What is the one thing that would make today feel worthwhile? Not ten things just one. Write it down, then give it your first and best attention, because most people spend their mornings reacting to messages, news, and other people's priorities, and choosing your one thing first is a quiet act of self-respect. Once you've chosen it, protect your attention like it's precious, because it is your focus is not infinite, and every notification and quick scroll chips away at it, so keep your phone in another room while you work, close the tabs you're not using, and tell people when you'll be unavailable, then actually be unavailable, because these tiny walls don't make you rigid, they make you present. Then work in honest stretches: short bursts of real focus followed by genuine breaks where you stand up, stretch, look out a window, and drink some water the point isn't the timer, it's the rhythm, because your mind isn't a machine that runs forever but a living thing that needs breath, and if you treat it that way, it will reward you. There's a strange freedom, too, in admitting you can't do everything you can't, and nobody can because the people who seem calm and accomplished aren't doing more than you, they're doing fewer things more deliberately, so before you add something to your day, ask does this actually matter? and if the answer is no, let it go, since saying no to the small stuff is how you say yes to the things that count. Just as important as how you start your day is how you end it, and most of us end our days by scrolling, which leaves the mind buzzing instead of resting, so try something different: take five minutes to write down what went well, close your laptop, tidy your desk, and set out one small thing for tomorrow little rituals that tell your brain the day is done, and it was enough and you'll sleep better and start tomorrow with a clearer head. Above all, be patient with yourself, because good habits are built in weeks and months, not days, and you will have off days and fall out of rhythm, but that's not failure, that's being human; the goal isn't a perfect streak, the goal is to keep coming back, since missing one day is a stumble and missing two is the start of a pattern, so come back quickly, kindly, and without drama. Start small, stay consistent, and remember: the point of a good routine isn't to grind harder it's to live better.</div>
+            <span class="hobby-tag"><i class="fas fa-rocket"></i> productivity · habits</span>
+            <button class="read-more" data-target="extraText3">read more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ACTIVITIES ===== -->
+    <div id="activities">
+      <h2 class="section-title reveal"><i class="fas fa-calendar-check" style="margin-right:12px;"></i> Extra-Curriculum Activities</h2>
+      <div class="activities-grid">
+        <div class="activity-card reveal">
+          <img class="activity-img" src="/last_po/image/codefest2024.jpeg" alt="Hackathon" />
+          <div class="activity-body">
+            <div class="activity-meta"><span><i class="far fa-calendar"></i> 1 December 2024</span><span><i class="fas fa-map-pin"></i> Pokhara </span></div>
+            <h3> Code Fest 2024 </h3>
+            <p>Developed an AI-powered voice module for automating home tasks, improving daily efficiency.</p>
+            <div class="activity-extra" id="actExtra1">
+              <p>Presented at CodeFest 2024 by <strong>Team Idea Cure</strong>, a dedicated group with 4 members, our project <strong>"Digital Sathi"</strong> integrated smart technology to enhance accessibility and convenience. The AI-based voice module was designed to automate home tasks, aiming to make everyday living smoother and more efficient for users.</p>
+              <div class="activity-extra-images">
+                <img src="/last_po/image/codefest2.jpeg" alt="extra" />
+                <img src="/last_po/image/codefest3.jpeg" alt="extra" />
+                <img src="/last_po/image/codefest4.jpeg" alt="extra" />
+              </div>
+            </div>
+            <div>
+              <span class="badge"><i class="fas fa-users"></i> 4 members</span>
+              <span class="badge"><i class="fas fa-code"></i> PHP/MySQL</span>
+            </div>
+            <button class="view-more-activity" data-target="actExtra1">view more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="activity-card reveal">
+          <img class="activity-img" src="/last_po/image/B1.jpeg" alt="Workshop" />
+          <div class="activity-body">
+            <div class="activity-meta"><span><i class="far fa-calendar"></i> September 2024</span><span><i class="fas fa-map-pin"></i> Waling Multiple Campus</span></div>
+            <h3>Secretary, BICTE Club</h3>
+            <p>Served a 1-year term as Secretary for the student-led BICTE Club, managing administrative tasks and organizing campus events.</p>
+            <div class="activity-extra" id="actExtra2">
+              <p>From September 2024 to September 2025, I worked as the Secretary of the BICTE Club, a student organization at Waling Multiple Campus. My responsibilities included managing official documentation and organizing tech-related events. I also coordinated directly with students to identify their problems and challenges, and worked closely with teachers and colleagues to find effective solutions to support them.</p>
+              <div class="activity-extra-images">
+                <img src="/last_po/image/B2.jpeg" alt="extra" />
+                <img src="/last_po/image/B3.jpeg" alt="extra" />
+                <img src="/last_po/image/B4.jpeg" alt="extra" />
+                <img src="/last_po/image/B5.jpeg" alt="extra" />
+              </div>
+            </div>
+            <div>
+              <span class="badge"><i class="fas fa-users"></i> 60+ Students, Teachers</span>
+               <span class="badge"><i class="fas fa-user-tie"></i> Leadership</span>
+            </div>
+            <button class="view-more-activity" data-target="actExtra2">view more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="activity-card reveal">
+          <img class="activity-img" src="/last_po/image/P1.jpeg" alt="Open source" />
+          <div class="activity-body">
+            <div class="activity-meta"><span><i class="far fa-calendar"></i> May 2025</span><span><i class="fas fa-map-pin"></i> Y Center, Waling</span></div>
+            <h3>Second Syangja Education and Entrepreneurship Fair-2082</h3>
+            <p>Pitched <strong>"Farm Connect"</strong>a smart agriculture platform designed to connect farmers with data and markets securing the 3rd position.</p>
+            <div class="activity-extra" id="actExtra3">
+               <p>From May 1st to 3rd, 2025 (2082 Baishakh 1-3), I attended the Second Syangja Education, Skills, and Entrepreneurship Fair, organized by the Syangja Think Tank. Along with two of my friends, we participated in the Startup Idea Pitch program and achieved 3rd position. Our project, <strong>Farm Connect</strong>, is a tech-driven smart agriculture startup designed to connect farmers with vital data, resources, and markets. We focused on automating farm management to boost productivity and sustainability. In our team, I led the innovation and scalability efforts, ensuring our smart farming solutions were both practical and forward-thinking.</p>
+              <div class="activity-extra-images">
+                <img src="/last_po/image/P2.jpeg" alt="extra" />
+                <img src="/last_po/image/P3.jpeg" alt="extra" />
+                <img src="/last_po/image/P4.jpeg" alt="extra" />
+                <img src="/last_po/image/P5.jpeg" alt="extra" />
+                <img src="/last_po/image/P6.jpeg" alt="extra" />
+                <img src="/last_po/image/P7.jpeg" alt="extra" />
+
+              </div>
+            </div>
+            <div>
+             <span class="badge"><i class="fas fa-trophy"></i> 3rd Position</span>
+              <span class="badge"><i class="fas fa-seedling"></i> AgriTech</span>
+              <span class="badge"><i class="fas fa-lightbulb"></i> Startup Pitch</span>
+            </div>
+            <button class="view-more-activity" data-target="actExtra3">view more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="activity-card reveal">
+          <img class="activity-img" src="/last_po/image/BC1.jpeg" alt="Conference" />
+          <div class="activity-body">
+            <div class="activity-meta"><span><i class="far fa-calendar"></i> July 2025</span><span><i class="fas fa-map-pin"></i> Waling Multiple Campus</span></div>
+            <h3>BICTE Summer BOOTCAMP 2025 (IOT)</h3>
+            <p>Participated in an intensive IoT bootcamp where 62+ students built projects like a Smart Parking System and a Buzz Wire Game.</p>
+            <div class="activity-extra" id="actExtra4">
+              <p>During the BICTE Summer Bootcamp 2025 focused on the Internet of Things (IoT), a total of 62+ students participated. We were divided into 15 different groups to tackle practical tech challenges. In my team of 4 members, we successfully designed and developed a <strong>Smart Parking System</strong> and a <strong>Buzz Wire Game</strong> using various IoT tools and microcontrollers. This hands-on experience greatly enhanced my hardware integration and problem-solving skills.</p>
+              <div class="activity-extra-images">
+                <img src="/last_po/image/BC2.jpeg" alt="extra" />
+                <img src="/last_po/image/BC3.jpeg" alt="extra" />
+                <img src="/last_po/image/BC4.jpeg" alt="extra" />
+                <img src="/last_po/image/BC5.jpeg" alt="extra" />
+                <img src="/last_po/image/BC6.jpeg" alt="extra" />
+                <img src="/last_po/image/BC7.jpeg" alt="extra" />
+                <img src="/last_po/image/BC8.jpeg" alt="extra" />
+                <img src="/last_po/image/BC9.jpeg" alt="extra" />
+              </div>
+            </div>
+            <div>
+              <span class="badge"><i class="fas fa-microchip"></i> IoT</span>
+              <span class="badge"><i class="fas fa-users"></i> 62+ Participants</span>
+              <span class="badge"><i class="fas fa-car"></i> Smart Parking</span>
+            </div>
+            <button class="view-more-activity" data-target="actExtra4">view more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+          <div class="activity-card reveal">
+          <img class="activity-img" src="/last_po/image/Program1.jpeg" alt="Digital Skills and Cyber Security Training" />
+          <div class="activity-body">
+            <div class="activity-meta"><span><i class="far fa-calendar"></i> November 2025</span><span><i class="fas fa-map-pin"></i> Waling Multiple Campus</span></div>
+            <h3>Digital Skills & Cyber Security Training</h3>
+            <p>Participated in a GIZ MEG Diaspora Expert program empowering women and girls through digital skills, cyber security, and financial literacy.</p>
+            
+            <div class="activity-extra" id="actExtra5">
+              <p>I participated in an empowering program conducted by the <strong>GIZ MEG Diaspora Expert Program</strong>, aimed at equipping women and young girls with essential modern skills. The training focused on three crucial areas: Digital Skills, Cyber Security, and Financial Literacy. The program was expertly coordinated and led by trainer <strong>Gaurav Tiwari</strong>. This initiative was incredibly valuable in helping participants navigate the digital world safely, manage their finances better, and build confidence in tech-driven environments.</p>
+              <div class="activity-extra-images">
+                <img src="/last_po/image/Program2.jpeg" alt="Women learning tech" />
+                <img src="/last_po/image/Program3.jpeg" alt="Digital skills" />
+                <img src="/last_po/image/Program4.jpeg" alt="Financial literacy" />
+              </div>
+            </div>
+            <div>
+              <span class="badge"><i class="fas fa-shield-alt"></i> Cyber Security</span>
+              <span class="badge"><i class="fas fa-wallet"></i> Financial Literacy</span>
+              <span class="badge"><i class="fas fa-female"></i> Women Empowerment</span>
+            </div>
+            <button class="view-more-activity" data-target="actExtra5">view more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+          <div class="activity-card reveal">
+          <img class="activity-img" src="/last_po/image/git1.jpeg " alt="Web Development Bootcamp" />
+          <div class="activity-body">
+            <div class="activity-meta"><span><i class="far fa-calendar"></i> July 2026</span><span><i class="fas fa-map-pin"></i> Waling Multiple Campus</span></div>
+            <h3>BICTE Club Tech Bootcamp</h3>
+            <p>Invited as a Guest Lecturer to teach Report Writing to 30+ students across multiple BICTE semesters.</p>
+            <div class="activity-extra" id="actExtra6">
+              <p>The BICTE Club organized a comprehensive bootcamp on Shrawan 02 and 03, 2083, focusing on Web Development, Git/GitHub, and Report Writing. I was honored to be invited as a <strong>Guest Lecturer for the second day</strong>. I delivered a detailed session on Report Writing, guiding over 30+ students from the BICTE 2nd, 4th, and 7th semesters. I explained the entire process, from structuring and formatting to final submission, helping them understand the academic and professional standards required.</p>
+              <div class="activity-extra-images">
+                <img src="/last_po/image/git2.jpeg" alt="Lecturing" />
+                <img src="/last_po/image/git3.jpeg" alt="Web development" />
+                <img src="/last_po/image/git4.jpeg" alt="Coding" />
+              </div>
+            </div>
+            
+            <div>
+              <span class="badge"><i class="fas fa-chalkboard-teacher"></i> Guest Lecturer</span>
+              <span class="badge"><i class="fas fa-file-alt"></i> Report Writing</span>
+              <span class="badge"><i class="fas fa-users"></i> 30+ Students</span>
+            </div>
+            <button class="view-more-activity" data-target="actExtra6">view more <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- ===== CONTACT SECTION  ===== -->
+    <div id="contact">
+      <h2 class="section-title reveal"><i class="fas fa-paper-plane" style="margin-right:12px;"></i>Get In Touch</h2>
+      <div class="contact-wrap reveal">
+        <div class="contact-form">
+          <h3 style="font-weight:500; margin-bottom:1rem; color:var(--text-primary);"><i class="fas fa-envelope" style="margin-right:10px;"></i>send a message</h3>
+
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="eb43b0e0-13b8-4db6-9758-d6f1c3d18be0">
+
+            <input type="hidden" name="subject" value="New message from Portfolio">
+
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <input type="text" id="nameInput" name="name" placeholder="your name" required />
+            <input type="email" id="emailInput" name="email" placeholder="your email" required />
+            <textarea id="msgInput" name="message" placeholder="your message ..." required></textarea>
+            
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> send</button>
+          </form>
+          
+          <div id="formStatus" style="margin-top:0.8rem; font-weight:400; color:var(--text-secondary);"></div>
+        </div>
+        <div class="contact-info">
+          <h3><i class="fas fa-address-card" style="margin-right:10px;"></i>dipisha@dumre.dev</h3>
+          <p>based in Waling, Syangja · open to collab</p>
+>
+          <div style="margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1.2rem;">
+            <span style="font-weight: 500; color: var(--text-secondary); letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">
+              <i class="fas fa-share-alt" style="margin-right: 8px; color: var(--btn-primary-bg);"></i> FIND ME ON
+            </span>
+            <div class="social-links">
+              <a href="https://github.com/deepsha-3?tab=overview&from=2026-10-01&to=2026-10-31" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/dipisha-dumre-798716397/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/deep_shadumre/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/share/1F3bCiZ31H/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.tiktok.com/@deepsha_dumre?_r=1&_t=ZS-9B1VIRkNc6p" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== FOOTER  SECTION ===== -->
+    <footer style="padding:1.5rem 0 2.5rem; border-top:1px solid var(--border-color); margin-top:0.5rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+      <span class="footer-copy">© 2026 · Dipisha Dumre ·  <i class="fas fa-circle" style="font-size:0.4rem; vertical-align:middle; color:var(--btn-primary-bg);"></i>  dynamic portfolio</span>
+      <span class="footer-copy"><i class="fas fa-arrow-up" style="margin-right:6px;"></i> <a href="#home" style="color:var(--text-muted); text-decoration:none;">back to top</a></span>
+    </footer>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast"><i class="fas fa-check-circle" style="margin-right:10px; color:var(--btn-primary-bg);"></i> Message sent successfully</div>
+
+  <!-- ===== LIGHTBOX OVERLAY ===== -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="close image"><i class="fas fa-times"></i></button>
+    <img src="" alt="enlarged activity image" id="lightboxImg" />
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
